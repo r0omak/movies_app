@@ -9,8 +9,8 @@ class OmdbClient
     parse_body(
       Faraday.get(URL, { apikey: @api_key, s: string })
     )
-    # response = Faraday.get(URL, { apikey: @api_key, s: string })
-    # parse_body(response)
+     response = Faraday.get(URL, { apikey: @api_key, s: string })
+    parse_body(response)
   end
 
   def find_by_title(title)

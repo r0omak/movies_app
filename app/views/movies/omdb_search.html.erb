@@ -25,7 +25,7 @@
           <% begin %>
             <%= image_tag(movie['Poster']) %>
           <% rescue Sprockets::Rails::Helper::AssetNotFound %>
-            <%= image_tag('test_image.png') %>
+            <%= image_tag('ukraine.png') %>
             <p>No image</p>
           <% rescue StandardError %>
             <p>Custom error</p>

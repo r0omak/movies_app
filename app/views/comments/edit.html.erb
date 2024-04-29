@@ -1,8 +1,9 @@
 <%= turbo_frame_tag dom_id(@comment) do %>
-  <h3>Edit Comment <%= @comment.id %> (by <%= @comment.user.email %>)</h3>
-  <%= form_for @comment, url: movie_comment_path(@comment, movie_id: @comment.commentable_id) do |form| %>
-    <%= render 'comments/form_field', form: form %>
-
-    <%= form.submit %>
-  <% end %>
+ <h3>Редагувати коментар <%= @comment.id %> (від <%= @comment.user.email %>)</h3>
+ <%= form_for @comment, url: movie_comment_path(@comment, movie_id: @comment.commentable_id) do |form| %>
+   <%= render 'comments/form_field', form: form %>
+ 
+   <%= form.submit %>
+ <% end %>
+ 
 <% end %>
